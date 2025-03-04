@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Show</title>
+        <link href="{{ asset('styles/app.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <table class="users">
+            <caption>Список пользователей</caption>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Имя</th>
+                        <th>Электронный адрес</th>
+                    </tr>
+                </thead>    
+                <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.id }}</td>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.email }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
